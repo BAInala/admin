@@ -27,7 +27,7 @@ a {
 
 .content-box {
     position: absolute;
-    left: 250px;
+    left: 230px;
     right: 0;
     top: 70px;
     bottom: 0;
@@ -182,3 +182,6 @@ a {
 .clearfix{
     clear:both;
 }
+.white{
+    background-color:#fff;
+ }

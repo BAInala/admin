@@ -119,25 +119,76 @@ export default {
           title: '营销工具'
         },
         {
-          icon: 'el-icon-question',
+          icon: 'el-icon-monitor',
           index: 'charts',
           title: '售后工作台'
         },
 
         {
           icon: 'el-icon-news',
-          index: '7',
-          title: '数据总览'
+          index: 'dataoverview',
+          title: '数据总览',
+          subs: [
+            {
+              index: 'jingyingview',
+              title: '经营总览'
+            },
+            {
+              index: 'trafficdata',
+              title: '流量数据'
+            }, {
+              index: 'productdata',
+              title: '商品数据'
+            }, {
+              index: 'tradingdata',
+              title: '交易数据'
+            }, {
+              index: 'servicedata',
+              title: '服务数据'
+            }, {
+              index: 'publicdata',
+              title: '公益数据'
+            }
+          ]
         },
         {
           icon: 'el-icon-view',
-          index: '8',
-          title: '资金管理'
+          index: 'fundmanage',
+          title: '资金管理',
+          subs: [
+            {
+              index: 'fundcenter',
+              title: '资金中心'
+            },
+            {
+              index: 'fundlimit',
+              title: '资金限制'
+            }, {
+              index: 'invoicemanage',
+              title: '发票管理'
+            }, {
+              index: 'checkfundcenter',
+              title: '对账中心'
+            }
+          ]
         },
         {
           icon: 'el-icon-setting',
-          index: '9',
-          title: '店铺管理'
+          index: 'shopmanage',
+          title: '店铺管理',
+          subs: [
+            {
+              index: 'shopmessage',
+              title: '店铺信息'
+            },
+            {
+              index: 'childaccount',
+              title: '子账号管理'
+            }, {
+              index: 'shopcheckout',
+              title: '退店'
+            }
+          ]
         }
       ]
     }
@@ -175,6 +226,7 @@ export default {
 .sidebar > ul {
     height: 100%;
 }
+
 .el-menu-item:hover,.el-submenu__title:hover{
     color:#21CA2E !important;
     background-color:#EEFFED !important;

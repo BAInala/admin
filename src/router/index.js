@@ -100,6 +100,119 @@ const routes = [
         },
         component: () => import(
           '../views/kefuservice/chatHistory.vue')
+      },
+      { // 数据总览
+        path: '/jingyingview',
+        name: 'jingyingview',
+        meta: {
+          title: '经营总览'
+        },
+        component: () => import(
+          '../views/dataoverview/jingyingView.vue')
+      },
+      {
+        path: '/trafficdata',
+        name: 'trafficdata',
+        meta: {
+          title: '流量数据'
+        },
+        component: () => import(
+          '../views/dataoverview/trafficData.vue')
+      },
+      {
+        path: '/productdata',
+        name: 'productdata',
+        meta: {
+          title: '商品数据'
+        },
+        component: () => import(
+          '../views/dataoverview/productData.vue')
+      },
+      {
+        path: '/tradingdata',
+        name: 'tradingdata',
+        meta: {
+          title: '交易数据'
+        },
+        component: () => import(
+          '../views/dataoverview/tradingData.vue')
+      },
+      {
+        path: '/servicedata',
+        name: 'servicedata',
+        meta: {
+          title: '服务数据'
+        },
+        component: () => import(
+          '../views/dataoverview/serviceData.vue')
+      },
+      {
+        path: '/publicdata',
+        name: 'publicdata',
+        meta: {
+          title: '公益数据'
+        },
+        component: () => import(
+          '../views/dataoverview/publicData.vue')
+      },
+      { // 资金管理
+        path: '/fundcenter',
+        name: 'fundcenter',
+        meta: {
+          title: '资金中心'
+        },
+        component: () => import(
+          '../views/fundmanage/fundCenter.vue')
+      }, {
+        path: '/fundlimit',
+        name: 'fundlimit',
+        meta: {
+          title: '资金限制'
+        },
+        component: () => import(
+          '../views/fundmanage/fundLimit.vue')
+      }, {
+        path: '/invoicemanage',
+        name: 'invoicemanage',
+        meta: {
+          title: '发票管理'
+        },
+        component: () => import(
+          '../views/fundmanage/invoiceManage.vue')
+      },
+      {
+        path: '/checkfundcenter',
+        name: 'checkfundcenter',
+        meta: {
+          title: '对账中心'
+        },
+        component: () => import(
+          '../views/fundmanage/checkfundCenter.vue')
+      },
+      { // 店铺管理
+        path: '/shopmessage',
+        name: 'shopmessage',
+        meta: {
+          title: '店铺信息'
+        },
+        component: () => import(
+          '../views/shopmanage/shopMessage.vue')
+      }, {
+        path: '/childaccount',
+        name: 'childaccount',
+        meta: {
+          title: '子账号管理'
+        },
+        component: () => import(
+          '../views/shopmanage/childAccount.vue')
+      }, {
+        path: '/shopcheckout',
+        name: 'shopcheckout',
+        meta: {
+          title: '退店'
+        },
+        component: () => import(
+          '../views/shopmanage/shopCheckout.vue')
       }
     ]
   },

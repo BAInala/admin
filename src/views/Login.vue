@@ -89,6 +89,7 @@ export default {
           localStorage.setItem('ms_username', this.param.username)
           this.$router.push('/')
           console.log('222333')
+          console.log('try')
         } else {
           this.$message.error('请输入账号和密码')
           return false

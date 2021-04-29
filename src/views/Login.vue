@@ -88,7 +88,7 @@ export default {
           this.$message.success('登录成功')
           localStorage.setItem('ms_username', this.param.username)
           this.$router.push('/')
-          console.log('222')
+          console.log('222333')
         } else {
           this.$message.error('请输入账号和密码')
           return false

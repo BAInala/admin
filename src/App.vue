@@ -2,7 +2,8 @@
   <router-view/>
 </template>
 
-<style lang="scss">
+<style>
 @import "./assets/css/main.css";
+@import "./assets/css/ele.css";
 
 </style>

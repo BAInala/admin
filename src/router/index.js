@@ -230,6 +230,24 @@ const routes = [
       '../views/Login.vue')
   },
   {
+    path: '/register',
+    name: 'register',
+    meta: {
+      title: '注册'
+    },
+    component: () => import(
+      '../views/register.vue')
+  },
+  {
+    path: '/resetpasssword',
+    name: 'resetpasssword',
+    meta: {
+      title: '重置密码'
+    },
+    component: () => import(
+      '../views/resetpasssword.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')
@@ -240,6 +258,7 @@ const router = createRouter({
   routes
 })
 router.beforeEach((to, from, next) => {
+  debugger
   document.title = `${to.meta.title} | yigouadmin`
   const role = localStorage.getItem('username')
   if (!role && to.path !== '/login') {

@@ -229,7 +229,7 @@ export default {
 }
 </script>
 <style lang="scss">
-.el-form-item__content{
+.login-wrap .el-form-item__content{
 border: 0px !important;
   border-radius: 0px !important;
   border-bottom: 1px solid #D0D0D0 !important;

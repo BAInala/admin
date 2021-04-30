@@ -170,6 +170,7 @@ export default {
 }
 </script>
 <style lang="scss">
+.register-wrap{
 .el-form-item__content{
 border: 0px !important;
   border-radius: 0px !important;
@@ -182,6 +183,8 @@ border: 0px !important;
   border-radius: 0px !important;
   outline: 0px !important;
 }
+}
+
 // .el-button.is-disabled, .el-button.is-disabled:focus, .el-button.is-disabled:hover{
 //     background-color: rgb(60, 143, 67);
 //     color: #fff;
@@ -219,11 +222,6 @@ border: 0px !important;
   width: 350px;
   margin: -190px 0 0 -175px;
   overflow: hidden;
-}
-.el-form-item__content{
-  border: 0px !important;
-  border-radius: 0px !important;
-  border-bottom: 1px solid #D0D0D0 !important;
 }
 .el-input--prefix .el-input__inner{
   border: 0px !important;

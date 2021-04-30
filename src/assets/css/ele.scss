@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix{
+    clear:both;
+}
+.white{
+    background-color:#fff;
+ }
+ .maincolor{
+     color:#21CA2E
+ }
+.l-right{
+    float:right !important;
+}
+/* chebox 选择框
+ */
+ .el-checkbox__input .el-checkbox__inner:hover {
+    border-color: #21CA2E;
+}
+.el-checkbox .el-checkbox__input.is-checked .el-checkbox__inner{
+  background-color: #21CA2E;
+  border-color: #21CA2E;
+}
+.el-button--success {
+    color: #FFF;
+    background-color: #21CA2E !important;
+    border-color: #21CA2E !important;
+}
+.el-button--success:focus, .el-button--success:hover {
+    background: #1dad29 !important;
+    border-color: #1dad29 !important;
+    color: #FFF;
+}
+
+/* 改变主题色变量 */
+$--color-primary: #21CA2E;
+ 
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+ 
+@import "~element-ui/packages/theme-chalk/src/index";

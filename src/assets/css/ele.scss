@@ -15,6 +15,18 @@
 .l-right{
     float:right !important;
 }
+.l-left{
+    float:left !important;
+}
+.p-l-20{
+    padding-left: 20px;
+}
+.p-t-20{
+    padding-top: 20px;
+}
+.m-t-20{
+    margin-top: 20px;
+}
 /* chebox 选择框
  */
  .el-checkbox__input .el-checkbox__inner:hover {
@@ -34,7 +46,14 @@
     border-color: #1dad29 !important;
     color: #FFF;
 }
-
+ .el-carousel__item li.el-carousel__indicator,.el-carousel__indicator--horizontal{
+     width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    line-height: 15px;
+    padding: 0;
+    background: #21CA2E;
+  }
 /* 改变主题色变量 */
 $--color-primary: #21CA2E;
  

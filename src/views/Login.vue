@@ -64,7 +64,7 @@
                <p class="forgetText">立即注册</p>
                </router-link>
             </el-col>
-            <el-col :span="8" :offset="5">
+            <el-col :span="8" :offset="2">
                <p class="forgetText login-yanzheng l-right" @click="yanzhenglogin">短信验证码登录</p>
             </el-col>
         </div>
@@ -124,7 +124,7 @@
                <p class="forgetText">立即注册</p>
                </router-link>
             </el-col>
-            <el-col :span="8" :offset="5">
+            <el-col :span="8" :offset="2">
                <p class="forgetText login-yanzheng l-right" @click="telLogin">账号密码登录</p>
             </el-col>
         </div>
@@ -186,6 +186,17 @@ export default {
     // 短信验证码登录
     yanzhenglogin () {
       this.origilogin = false
+    },
+    yanzhengSave () {
+      this.$refs.yanzhengLogin.validate((valid) => {
+        if (valid) {
+          this.$message.success('登录成功')
+          localStorage.setItem('username', this.param.username)
+          this.$router.push('/')
+        } else {
+          return false
+        }
+      })
     },
     // 点击账号密码登录
     telLogin () {

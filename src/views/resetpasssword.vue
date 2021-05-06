@@ -14,8 +14,8 @@
           <!--身份验证 -->
           <div class="resetpswContent" v-if="setpactive==0">
             <el-form :model="resetAuthentForm" :rules="resetAuthent" ref="resetAuthentForm" label-width="100px" class="demo-ruleForm">
-              <el-form-item label="账号类型" >
-                  <el-radio-group v-model="resetAuthentForm.radioType" size="small" prop="radioType">
+              <el-form-item label="账号类型" prop="radioType">
+                  <el-radio-group v-model="resetAuthentForm.radioType" size="small">
                     <el-radio label=1 border>备选项1</el-radio>
                     <el-radio label=2 border>备选项2</el-radio>
                   </el-radio-group>
@@ -51,7 +51,7 @@
                 </el-form-item>
 
               <el-form-item class="resetpsw-button p-t-20">
-                <el-button type="success" @click="setpswSubmit('resetAuthentForm')">提交</el-button>
+                <el-button type="success" @click="setpsfzSubmit('resetAuthentForm')">提交</el-button>
               </el-form-item>
             </el-form>
           </div>
@@ -219,11 +219,21 @@ export default {
         this.disabled = false
       }
     },
+    setpsfzSubmit (valid) {
+      this.$refs[valid].validate((valid) => {
+        if (valid) {
+          // 重置身份证-成功
+          this.setpactive += 1
+        } else {
+          return false
+        }
+      })
+    },
     // 重置密码
     setpswSubmit (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          // 重置成功-到完成
+          // 重置密码成功-到完成
           this.setpactive += 1
         } else {
           return false
@@ -286,12 +296,6 @@ export default {
    color: #2A54CC;
    padding-left: 60px;
   }
-  >>>.el-step__title.is-process,>>>.el-step__head.is-process {
-    color: #21CA2E;
-  }
->>>.el-step__head.is-process{
-   border-color: #21CA2E;
-}
 .huoqu-btn{
   position: absolute;
     right: 5px;

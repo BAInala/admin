@@ -211,7 +211,10 @@
                         <div v-for="item in items"  :key="item" style="height:60px">
                               <div class="l-left" style="width:60%">
                                  <el-image class="l-left" :src="item.url" style="width:10%"></el-image>
-                                 <div class="l-left">
+                                 <div class="l-left" style=" white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;">
                                     <p class="p-l-20 textweight">{{item.text}}</p>
                                     <span class="p-l-20 timescolor">报名时间: {{item.data}}</span>
                                     <span class="p-l-20 timescolor">已报名</span>

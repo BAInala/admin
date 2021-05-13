@@ -2,6 +2,7 @@
    <div class="content-firstpage">
       <div class="firstpagedetail white">
          <el-row>
+
             <el-col :span="4">
                <div class="grid-content">
                      <p>待支付</p>
@@ -184,7 +185,9 @@
                      <span>公益广告</span>
                   </el-col>
                   <el-col :span="3" :offset="6">
-                     <p class="shujutext">广告详情</p>
+                     <router-link to="/publicadverte">
+                        <p class="shujutext">广告详情</p>
+                      </router-link>
                   </el-col>
 
                   <el-divider></el-divider>
@@ -204,13 +207,15 @@
                      <span>平台活动</span>
                   </el-col>
                   <el-col :span="3" :offset="6">
-                     <p class="shujutext">查看更多</p>
+                     <router-link to="/pingtaiactivity">
+                        <p class="shujutext">查看更多</p>
+                     </router-link>
                   </el-col>
                   <el-divider></el-divider>
                   <div class="right-huodong">
                         <div v-for="item in items"  :key="item" style="height:60px">
-                              <div class="l-left" style="width:60%">
-                                 <el-image class="l-left" :src="item.url" style="width:10%"></el-image>
+                              <div class="l-left" style="width:80%">
+                                 <el-image class="l-left" :src="item.url" style="width:50px"></el-image>
                                  <div class="l-left" style=" white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -222,9 +227,8 @@
                                  </div>
 
                               </div>
-                              <div class="l-right" style="margin-right:40px">
-                                 <el-button>立即报名</el-button>
-
+                              <div class="l-right" style="width:20%;">
+                                 <el-button type="primary" size="small" plain>立即报名</el-button>
                               </div>
 
                         </div>

@@ -21,6 +21,24 @@ const routes = [
           '../views/firstPage.vue')
       },
       {
+        path: '/publicadverte',
+        name: 'publicadverte',
+        meta: {
+          title: '公益广告'
+        },
+        component: () => import(
+          '../views/publicadverte.vue')
+      },
+      {
+        path: '/pingtaiactivity',
+        name: 'pingtaiactivity',
+        meta: {
+          title: '平台活动'
+        },
+        component: () => import(
+          '../views/pingtaiactivity.vue')
+      },
+      {
         path: '/newgoods',
         name: 'newgoods',
         meta: {
@@ -246,6 +264,15 @@ const routes = [
     },
     component: () => import(
       '../views/resetpasssword.vue')
+  },
+  {
+    path: '/accoutmanage',
+    name: 'accoutmanage',
+    meta: {
+      title: '账户管理'
+    },
+    component: () => import(
+      '../views/accoutmanage.vue')
   },
   {
     path: '/about',

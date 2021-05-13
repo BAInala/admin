@@ -23,7 +23,7 @@
                         :content="message?`有${message}条未读消息`:`消息中心`"
                         placement="bottom"
                     >
-                        <router-link to="/tabs">
+                        <router-link to="/firstpage">
                             <i class="el-icon-bell"></i>
                             <p class="yigouText">消息</p>
                         </router-link>
@@ -45,25 +45,27 @@
             <div class="header-user-con">
 
                 <!-- 用户头像 -->
-                <div class="user-avator">
-                    <img src="../assets/img/img.jpg" />
-                </div>
+                 <router-link to="/accoutmanage">
+                  <div class="user-avator">
+                      <img src="../assets/img/img.jpg" />
+                  </div>
+                 </router-link>
                  <div class="user-avator">
                     <p> {{username}}</p>
                     <p>qvder</p>
                 </div>
+
                 <!-- 用户名下拉菜单 -->
                 <el-dropdown class="user-name" trigger="click" @command="handleCommand">
                     <span class="el-dropdown-link">
                         <i class="el-icon-caret-bottom"></i>
                     </span>
-                    <template #dropdown>
-                        <el-dropdown-menu>
-                            <a href="https://github.com/lin-xin/vue-manage-system" target="_blank">
-                                <el-dropdown-item>项目仓库</el-dropdown-item>
-                            </a>
-                            <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
-                        </el-dropdown-menu>
+                   <template #dropdown>
+                     <p>1111</p>
+                    <el-dropdown-menu class="dropout">
+                       <el-dropdown-item  command="loginout">账号管理</el-dropdown-item>
+                      <el-dropdown-item  command="loginout">退出</el-dropdown-item>
+                    </el-dropdown-menu>
                     </template>
                 </el-dropdown>
 
@@ -161,7 +163,8 @@ export default {
 }
 .header-right {
     float: right;
-    margin-right: 35px;
+    padding-right: 50px;
+    /* margin-right: 35px; */
 }
 
 .header-user-con {
@@ -195,7 +198,7 @@ export default {
     color: #fff;
 }
 .user-name {
-    margin-left: 10px;
+  margin-right: 10px;
 }
 .user-avator {
     margin-left: 20px;
@@ -205,6 +208,10 @@ export default {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+.el-dropdown__popper>>>.el-scrollbar{
+  width:300px!important;
+  height:200px !important;
 }
 .el-dropdown-link {
     cursor: pointer;

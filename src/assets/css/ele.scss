@@ -21,11 +21,38 @@
 .p-l-20{
     padding-left: 20px;
 }
+.p-l-10{
+    padding-left: 10px;
+}
 .p-t-20{
     padding-top: 20px;
 }
+.p-r-20{
+    padding-right: 20px;
+}
+.p-b-20{
+    padding-bottom: 20px;
+}
 .m-t-20{
     margin-top: 20px;
+}
+.m-t-50{
+    margin-top: 50px;
+}
+.m-l-20{
+    margin-left: 20px;
+}
+.m-b-20{
+    margin-bottom: 20px;
+}
+.f700{
+    font-weight: 700;
+}
+.line-28{
+    line-height: 28px;
+}
+.line-55{
+    line-height: 55;
 }
 /* chebox 选择框
  */
@@ -53,6 +80,9 @@
     line-height: 15px;
     padding: 0;
     background: #21CA2E;
+  }
+  .all-content .el-menu{
+    border-right: none !important;
   }
 /* 改变主题色变量 */
 $--color-primary: #21CA2E;

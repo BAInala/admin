@@ -123,6 +123,43 @@ const routes = [
         component: () => import(
           '../views/kefuservice/chatHistory.vue')
       },
+      // 售后工作台
+      {
+        path: '/orderappeal',
+        name: 'orderappeal',
+        meta: {
+          title: '订单申诉'
+        },
+        component: () => import(
+          '../views/aftersalework/orderappeal.vue')
+      },
+      {
+        path: '/evaluationmanage',
+        name: 'evaluationmanage',
+        meta: {
+          title: '评价管理'
+        },
+        component: () => import(
+          '../views/aftersalework/evaluationmanage.vue')
+      },
+      {
+        path: '/fastrefund',
+        name: 'fastrefund',
+        meta: {
+          title: '极速退款'
+        },
+        component: () => import(
+          '../views/aftersalework/fastrefund.vue')
+      },
+      {
+        path: '/smallpayment',
+        name: 'smallpayment',
+        meta: {
+          title: '小额打款'
+        },
+        component: () => import(
+          '../views/aftersalework/smallpayment.vue')
+      },
       { // 数据总览
         path: '/jingyingview',
         name: 'jingyingview',

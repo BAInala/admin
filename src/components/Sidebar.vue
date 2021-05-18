@@ -121,7 +121,23 @@ export default {
         {
           icon: 'el-icon-monitor',
           index: 'charts',
-          title: '售后工作台'
+          title: '售后工作台',
+          subs: [
+            {
+              index: 'orderappeal',
+              title: '订单申诉'
+            },
+            {
+              index: 'evaluationmanage',
+              title: '评价管理'
+            }, {
+              index: 'fastrefund',
+              title: '极速退款'
+            }, {
+              index: 'smallpayment',
+              title: '小额打款'
+            }
+          ]
         },
 
         {

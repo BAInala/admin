@@ -7,11 +7,13 @@ vscode  第一次上传
    
 3. git add .     将文件添加到暂存区
 4. git commit -m "提交的描述"
-5. git remote add origin git@github.com:wahaah/openFileDemo.git     orgin--自定义从仓库别名       git@...-----这是仓库地址
-6. git push -u origin master              master----分支名称
+5. git remote add origin git@github.com:wahaah/openFileDemo.git      
+                  orgin--自定义从仓库别名       git@...-----这是仓库地址
+7. git push -u origin master              master----分支名称
 
 
 ############
+<!-- 现在github  默认的分支是main -->
 git push -u origin main            将master分支移到main
 git clone -b 分支名称  项目地址
 假设分支名称是test 则

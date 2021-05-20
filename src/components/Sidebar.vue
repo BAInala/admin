@@ -216,6 +216,9 @@ export default {
     collapse () {
       return this.$store.state.collapse
     }
+  },
+  watch: {
+
   }
 }
 </script>

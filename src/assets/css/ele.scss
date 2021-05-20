@@ -12,6 +12,9 @@
  .maincolor{
      color:#21CA2E
  }
+ .mainbcg{
+     background: #21CA2E !important;
+ }
 .l-right{
     float:right !important;
 }
@@ -51,8 +54,14 @@
 .m-l-20{
     margin-left: 20px;
 }
+.m-l-10{
+    margin-left: 10px;
+}
+.m-l-50{
+    margin-left: 50px;
+}
 .m-b-20{
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 .f700{
     font-weight: 700;
@@ -63,6 +72,16 @@
 .line-55{
     line-height: 55;
 }
+.p-10{
+    padding: 10px;
+}
+.p-40-10{
+    padding: 40px 10px
+}
+.c6{
+    color: #666;
+}
+
 /* chebox 选择框
  */
  .el-checkbox__input .el-checkbox__inner:hover {

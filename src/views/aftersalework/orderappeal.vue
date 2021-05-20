@@ -334,7 +334,7 @@
                       <el-image
                       style="width: 80px;"
                       :src="scope.row.url"
-                      :fit="fit"></el-image>
+                      ></el-image>
                     </el-col>
                     <el-col :span="12">
                        <p style="margin-left: 10px;color:#7090FD;overflow: hidden;
@@ -448,7 +448,7 @@ export default {
         alldata: [
           {
             orderNo: '12345689742',
-            name: '2222',
+            name: '洗发水',
             id: 1,
             info: '222十四是哈哈哈',
             buyname: '买家1',
@@ -460,7 +460,14 @@ export default {
             fahuoStatus: '已发货',
             shouhouType: '退货退款',
             shouhouStatus: '退货退款成功',
-            reason: '我不想要了'
+            shouhouNum: 2,
+            reason: '我不想要了',
+            logsticCom: '圆通快递',
+            logsticCode: 'ST743822',
+            address: '江苏南通',
+            shoujianPerson: '收件人1111',
+            butieMoney: 19
+
           },
           {
             orderNo: '02134433',
@@ -476,7 +483,13 @@ export default {
             fahuoStatus: '未发货',
             shouhouType: '退款',
             shouhouStatus: '退款成功',
-            reason: '七天无理由'
+            shouhouNum: 0,
+            reason: '七天无理由',
+            logsticCom: '顺丰快递',
+            logsticCode: 'ST70009999',
+            address: '江苏苏州',
+            shoujianPerson: '我是收件人',
+            butieMoney: 88
           }
         ]
       },
@@ -645,14 +658,14 @@ export default {
     },
     viewDetail (index, row) {
       console.log(index, row)
-      this.$alert('这是一段内容', '标题名称', {
-        confirmButtonText: '确定',
-        callback: action => {
-          this.$message({
-            type: 'info',
-            message: `action: ${action}`
-          })
-        }
+      console.log(JSON.stringify(row))
+      this.$router.push({ // 核心语句
+        name: 'vieworderdetaill', // 跳转的路径
+        params: { // 传递参数
+          index,
+          data: JSON.stringify(row)
+        },
+        active: { background: '#ed4' }
       })
     },
     handleaddRemark (index, row) {
@@ -674,7 +687,7 @@ export default {
 }
 </script>
 
-<style  lang="scss">
+<style  lang="scss" scoped>
 .aftersale-content {
   padding: 10px;
   background: #fff;

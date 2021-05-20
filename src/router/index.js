@@ -134,6 +134,15 @@ const routes = [
           '../views/aftersalework/orderappeal.vue')
       },
       {
+        path: '/orderappeal/vieworderdetaill/:data',
+        name: 'vieworderdetaill',
+        meta: {
+          title: '售后详情'
+        },
+        component: () => import(
+          '../views/aftersalework/vieworderdetaill.vue')
+      },
+      {
         path: '/evaluationmanage',
         name: 'evaluationmanage',
         meta: {

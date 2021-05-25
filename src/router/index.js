@@ -134,7 +134,7 @@ const routes = [
           '../views/aftersalework/orderappeal.vue')
       },
       {
-        path: '/orderappeal/vieworderdetaill/:data',
+        path: '/vieworderdetaill',
         name: 'vieworderdetaill',
         meta: {
           title: '售后详情'

@@ -1,7 +1,7 @@
 <template>
   <div class="aftersale-content">
     <p class="f700">售后工作台</p>
-    <div class="aftersale-jiaoyiinfo m-t-50">
+    <div class="m-t-50">
       <!-- 售后数据 -->
       <div class="aftersale -first">
         <span class="line"></span>
@@ -384,13 +384,12 @@ white-space: nowrap;">{{ scope.row.info }}</p>
                 <el-table-column label="操作">
                   <template #default="scope">
                     <div>
-                       <el-button
+                      <el-button
                       size="mini"
                       type="text"
                       style="color: #7090FD;cursor:pointer"
                       @click="viewDetail(scope.$index, scope.row)"
-                      >查看详情</el-button
-                    >
+                      >查看详情</el-button>
 
                     </div>
 
@@ -414,6 +413,26 @@ white-space: nowrap;">{{ scope.row.info }}</p>
         </template>
       </div>
     </div>
+
+    <!-- 添加备注 -->
+    <el-dialog
+      title="添加备注"
+      customClass="customWidth"
+      v-if="orderdialogFormVisible"
+      v-model="orderdialogFormVisible"
+    >
+      <el-form :model="remarkform">
+        <el-form-item label="备注" :label-width="formLabelWidth">
+          <el-input v-model="remarkform.remark" autocomplete="off"></el-input>
+        </el-form-item>
+      </el-form>
+      <template #footer>
+        <span class="dialog-footer">
+          <el-button @click="orderdialogFormVisible = false">取 消</el-button>
+          <el-button type="primary" @click="ordersureRemarks()">确 定</el-button>
+        </span>
+      </template>
+    </el-dialog>
   </div>
 </template>
 <script>
@@ -442,6 +461,11 @@ export default {
         money2: '',
         refuse: '',
         time: ''
+      },
+      formLabelWidth: '100px',
+      orderdialogFormVisible: false,
+      remarkform: {
+        remark: ''
       },
       datalist: {
         total: 2,
@@ -660,18 +684,27 @@ export default {
       console.log(index, row)
       console.log(JSON.stringify(row))
       this.$router.push({ // 核心语句
-        name: 'vieworderdetaill', // 跳转的路径
-        params: { // 传递参数
+        path: 'vieworderdetaill', // 跳转的路径
+        query: { // 传递参数
           index,
           data: JSON.stringify(row)
         },
         active: { background: '#ed4' }
       })
     },
-    handleaddRemark (index, row) {
+    handleaddRemark (index, row) { // 添加备注
       console.log(index, row)
+      this.orderdialogFormVisible = true
       this.$message({
         message: '恭喜你，这是一条成功消息',
+        type: 'success'
+        // duration: 100
+      })
+    },
+    ordersureRemarks () { // 添加备注-确定按钮
+      this.orderdialogFormVisible = false
+      this.$message({
+        message: '哈哈 我确定',
         type: 'success'
       })
     },
@@ -689,7 +722,7 @@ export default {
 
 <style  lang="scss" scoped>
 .aftersale-content {
-  padding: 10px;
+  padding: 10px 10px 200px 10px;
   background: #fff;
   // height: 100%;
   .line {

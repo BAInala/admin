@@ -573,7 +573,7 @@ export default {
   created () {
     debugger
     console.log(this)
-    this.getprops = JSON.parse(this.$route.params.data) // 接受参数关键代码
+    this.getprops = JSON.parse(this.$route.query.data) // 接受参数关键代码
     console.log(this.getprops)
   },
   methods: {
@@ -639,13 +639,14 @@ export default {
         .catch(() => {})
     }
   },
-  mounted () {}
+  mounted () {
+  }
 }
 </script>
 
 <style  lang="scss">
 .vieworderdetail-content {
-  padding: 10px;
+  padding: 10px 10px 200px 10px;
   background: #fff;
   .line {
     display: inline-block;

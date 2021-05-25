@@ -96,7 +96,6 @@ export default {
           { required: true, message: '请输入手机号', trigger: 'blur' },
           {
             validator: function (rule, value, callback) {
-              debugger
               const reg = /^[1][3-9][0-9]{9}$/
               if (!value) {
                 callback()

@@ -27,3 +27,9 @@ export default {
   }
 }
 </script>
+<style>
+ .content-box{
+   height: 100%;
+
+ }
+</style>

@@ -196,6 +196,15 @@ const routes = [
         component: () => import(
           '../views/dataoverview/productData.vue')
       },
+      { // 商品订单详情
+        path: '/viewProduct',
+        name: 'viewProduct',
+        meta: {
+          title: '售后详情'
+        },
+        component: () => import(
+          '../views/dataoverview/viewproductData.vue')
+      },
       {
         path: '/tradingdata',
         name: 'tradingdata',

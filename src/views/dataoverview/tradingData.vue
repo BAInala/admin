@@ -1,6 +1,3 @@
-/* eslint-disable eqeqeq */
-/* eslint-disable eqeqeq */
-/* eslint-disable eqeqeq */
 <template>
   <div class="trading-content">
     <p class="f700">交易数据</p>
@@ -479,7 +476,7 @@ export default {
 }
 </script>
 
-<style  lang="scss">
+<style  lang="scss" scoped>
 .trading-content {
   padding: 10px;
   background: #fff;

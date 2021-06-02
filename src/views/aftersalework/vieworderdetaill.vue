@@ -644,7 +644,7 @@ export default {
 }
 </script>
 
-<style  lang="scss">
+<style  lang="scss" scoped>
 .vieworderdetail-content {
   padding: 10px 10px 200px 10px;
   background: #fff;

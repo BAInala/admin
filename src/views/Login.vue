@@ -23,7 +23,7 @@
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-col class="line" :span="16">
+          <el-col :span="16">
             <el-input
               type="password"
               placeholder="请输入密码"
@@ -34,9 +34,9 @@
             </el-input>
           </el-col>
           <el-col :span="2"><span class="linespan" >|</span></el-col>
-          <el-col class="line" :span="6">
+          <el-col :span="6">
             <router-link to="/resetpasssword">
-              <p class="forgetText">忘记密码?</p>
+              <p class="forgetText" style="padding: 0 0px;">忘记密码?</p>
             </router-link>
           </el-col>
         </el-form-item>
@@ -91,7 +91,7 @@
         </el-form-item>
         <!-- 获取验证码 -->
          <el-form-item prop="code">
-          <el-col class="line" :span="13">
+          <el-col  :span="13">
             <el-input
               type="password"
               placeholder="请输入验证码"

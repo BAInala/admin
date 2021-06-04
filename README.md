@@ -22,6 +22,12 @@ git clone -b test 项目地址
  git命令 切换分支：       git checkout 分支名
  合并分支：               将test合并到master-----------先切换到master  然后执行 ： git merge test
  
+ 
+ 重新关联远程仓库
+         git remote rm origin 
+
+         git remote add origin 远程仓库地址
+ 
 
 
 
